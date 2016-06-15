@@ -9,5 +9,5 @@ def fibonacci(n):
 		t2=t1
 		t1=nextNum
 	print(lst)
-#Get the first 20 fibonacci numbers"	
+#Get the first 20 fibonacci numbers
 fibonacci(20)
