@@ -1,7 +1,7 @@
 def fizz_buzz(n):
 	"""Return fizz when divisible by 3
 		return buzz when divisible by 5
-		return fizzbuzz when divisible by 3 and 5
+		return fizzbuzz when divisible by both 3 and 5
 	"""
 
 	if n%15==0:
