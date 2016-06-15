@@ -17,7 +17,7 @@ def check_prime(n):
 		if n%i==0:
 			return False
 	return True
-#Get a list of the first 20 prime numbers:
+#Get a list of the first 20 prime numbers
 get_prime(20)
 
 
