@@ -1,4 +1,4 @@
-#Notes taking app assignment
+#Programming logic assignment: notes taking app
 
 class NotesApplication(object):
 	def __init__(self,author):
