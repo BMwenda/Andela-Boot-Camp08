@@ -1,23 +1,32 @@
-#Function to get the 1st n prime numbers
-def get_prime(x):
-	lst=[]
-	j=0
-	while len(lst)<x:
-		if check_prime(j)==True:
-			lst.append(j)
-		j+=1
-
-	print(lst)
-
-#A function to check if a number is prime
-def check_prime(n):
-	if n<2:
-		return False
-	for i in range(2,int(n**0.5)+1):
-		if n%i==0:
-			return False
-	return True
-#Get a list of the first 20 prime numbers
-get_prime(20)
+''' Function to get the first n prime numbers '''
+# An infinite loop -while True- is needed.
+# Because we need it to iterate infinitely, until we
+# can break out of it. A while True loop is fantastic
+# if you want to break out of a loop.
 
 
+def get_primes(n):
+    lst = [2]
+    testNum = 3
+    if n == 1:
+        return [lst[0]]
+    elif n == 0:
+        return []
+    elif n < 0:
+        raise Exception("Negative numbers are not allowed")
+    elif type(n) is not int:
+        raise TypeError("Only integers are allowed")
+
+    while True:
+        prime = True
+        for item in lst:
+            if testNum % item == 0:
+                prime = False
+                break
+                testNum += 1
+        if prime:
+            lst.append(testNum)
+        testNum += 1
+        if len(lst) == n:
+            break
+    return lst
